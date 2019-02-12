@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加信息</title>
+	<link rel="stylesheet" href="/public/add.css">
+</head>
+<body>
+	<div id="header">
+		<h1 class="header-h">请填写相关信息</h1>
+	</div>
+	<div id="formDiv">
+		<form action="/add" method="post">
+			<div class="level">
+				<label for="">姓名：</label>
+				<input type="text" name="name" id="" minlength="2" maxlength="10" class="textInput">
+			</div>
+			<div class="level">
+				<label for="">性别：</label>
+				<div>
+					<label for="">
+						<input type="radio" name="sex" value="男" checked>男
+					</label>
+					<label for="">
+						<input type="radio" name="sex" value="女" >女
+					</label>			
+				</div>				
+			</div>
+			<div class="level">
+				<label for="">年龄：</label>
+				<input type="text" class="textInput" name="age">
+			</div>
+			<div class="level">
+				<label for="">爱好：</label>
+				<input type="text" class="textInput" name="hobbies">
+			</div>
+			<div>
+				<input type="submit" value="提交" class="submitInput">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

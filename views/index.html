@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生信息</title>
+	<link rel="stylesheet" href="/public/index.css">
+</head>
+<body>
+	<header id="header" >
+		<h1 class="header-h">学生信息管理</h1>
+	</header><!-- /header -->
+	<div id="addDiv">
+		<a href="/add" title="" class="addBtn">添加信息</a>
+	</div>
+	<div id="tableDiv">
+		<table border="1" cellspacing="0" cellpadding="">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+					<th>爱好</th>
+					<th>处理</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{ each persons}}
+				<tr>
+					<td>{{ $value.id }}</td>
+					<td>{{ $value.name }}</td>
+					<td>{{ $value.sex }}</td>
+					<td>{{ $value.age }}</td>
+					<td>{{ $value.hobbies }}</td>
+					<td>
+						<a href="/edit?id={{ $value.id }}" class="change">编辑</a>
+						<a href="/delete?id={{ $value.id }}" class="change">删除</a>
+					</td>
+				</tr>
+				{{ /each }}
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
